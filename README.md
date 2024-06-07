@@ -1,1 +1,1 @@
-Do you want to talk with someone that listens to everything? Wally cannot wait to read your thoughts. 
+Wally este cel mai bun prieten al tuturor.
