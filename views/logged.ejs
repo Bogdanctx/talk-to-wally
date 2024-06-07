@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="./style_logged/style.css">
+        <link rel="stylesheet" href="./style_logged/chat-box.css">
+        <link rel="stylesheet" href="./style_logged/left-content.css">
+        <link rel="stylesheet" href="./style_logged/right-content.css">
+        <script src="../api/main.js"></script>
+        <title>Talk To Wally</title>
+    </head>
+    <body>
+        <div id="root"> <!--restul de content in jos-->
+
+            <div id="left-content"> <!--content stanga-->
+
+                <div id="menu">
+                    <button id="menu-dropbtn">
+                        <i class="bi bi-gear"></i> Options
+                    </button>
+                    <div id="m-chats">
+                        <div class="menu-element">
+                            <button type="button" class="me-btn" onclick="clearChat()">Clear chat</button>
+                        </div>
+                        <div class="menu-element">
+                            <button type="button" class="me-btn" onclick="disconnect()">Disconnect</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div id="chat-box"> <!--content mijloc-->
+                
+                <div id="cb-header"> <!--header chat-box-->
+                    <div class="cbm-wrapper">
+                        <img class="cbm-message-avatar" src="../assets/Wally.png" alt="avatar_wally">
+                        <div class="cbm-helper">
+                            <h2 class="cbm-user-name">Wally</h2>
+                            <h2 class="cbm-user-message" id="cbh-status">Online</h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="cb-messages"> <!--mesajele-->
+                    
+                    
+                    
+                
+                </div>
+                
+                <div id="cb-footer"> <!--input si buton de send-->
+                    <div id="cbf-wrapper">
+                        <input id="cbf-input" placeholder="Message">
+                        <button id="cbf-send-message-button" type="submit" onClick="sendMessage()"><i class="bi bi-send" style="color: rgb(204, 204, 204); font-size: 20px;"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="right-content"> <!--content dreapta-->
+                <h1>TALK TO WALLY</h1>
+                <br>
+                <h2>CONNECTED AS <%= username %></h2>
+                <br>
+                <h3 id="last-connection">Last connected: no data to show</h3>
+            </div>
+        
+        </div>
+    </body>
+    <script>
+        var username = '<%= username %>';
+    </script>
+</html>

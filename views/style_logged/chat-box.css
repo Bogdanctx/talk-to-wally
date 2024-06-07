@@ -1,0 +1,164 @@
+#chat-box {
+    height: 100%;
+    min-height: 40vh;
+    
+    width: fit-content;
+    max-width: 33.33vw;
+    min-width: 33.33vw;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: rgb(42, 77, 122);
+}
+
+
+
+
+#cb-header {
+    padding: 5px;
+    border: 1px dotted white;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    height: min-content;
+}
+
+
+#cbh-status {
+    color: lightgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************ SECTION CB-MESSAGES ****************/
+
+@media only screen and (max-width: 600px) {
+    .cbm-message-avatar {
+        display: none;
+    }
+}
+
+@keyframes highlightMessage {
+    0% {
+        transform: rotate(-0.5deg);
+    }
+    5% {
+        box-shadow: 0px 0px 10px 10px rgb(63, 67, 116);
+        transform: rotate(-1deg);
+    }
+    10% {
+        box-shadow: 0px 0px 10px 10px rgb(63, 67, 116);
+        transform: rotate(0.5deg);
+    }
+    15% {
+        box-shadow: 0px 0px 10px 10px rgb(63, 67, 116);
+        transform: rotate(1deg);
+    }
+    20% {
+        box-shadow: none;
+        transform: rotate(0deg);
+    }
+}
+
+#cb-messages {
+    height: fit-content;
+    max-height: 100%;
+    overflow-Y: scroll;
+    max-width: inherit;
+
+    border: 4px solid rgb(42, 77, 122);
+    border-top: 0;
+    border-bottom: 0;
+
+    background-color: rgb(29, 42, 59);
+}
+
+.cbm-box {
+    padding: 5px;
+    background-color: rgb(29, 42, 59);
+}
+.cbm-box:last-child {
+    animation: highlightMessage 5s linear infinite;
+}
+
+.cbm-wrapper {
+    display: flex;
+}
+
+.cbm-wrapper-wally-case {
+    justify-content: right;
+    text-align: right;
+}
+
+.cbm-user-name {
+    margin: 0;
+
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: white;
+}
+
+.cbm-user-message {
+    margin: 0;
+
+    font-family: "Varela Round", sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.cbm-message-avatar {
+    margin: 0px 5px 0px 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.wally-message {
+    margin-right: 5px;
+}
+
+
+/****************************************************/
+
+
+
+
+
+
+/****************** CHAT-BOX FOOTER ****************/
+#cb-footer {
+    padding: 10px;
+    display: flex;
+    align-self: flex-end;
+    max-width: inherit;
+}
+
+#cbf-wrapper {
+    text-align: center;
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+
+    width: 100%;
+}
+
+#cbf-input {
+    width: 100%;
+    padding-left: 6px;
+}
+
+#cbf-send-message-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: transparent;
+}

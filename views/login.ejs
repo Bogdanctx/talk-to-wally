@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Talk to Wally - Login</title>
+        <link rel="stylesheet" href="./style_login/style.css">
+    </head>
+    <body>
+        <div id="box-title">
+            <h1 id="title">TALK TO WALLY</h1>
+        </div>
+        <div id="login-box">
+            <div id="lb-header">
+                <h1 id="lb-title">LOGIN</h1>
+            </div>
+            <div id="lb-form">
+                <form method="post" id="login-form" action="login">
+                    <label for="form-username">Username</label>
+                    <input type="text" id="form-username" name="username" placeholder="Username" pattern="[A-Za-z]+" required>
+                    
+                    <label for="form-password">Password</label>
+                    <input type="password" id="form-password" name="password" placeholder="Password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <form method="post" action="register" id="register-aux">
+            <button id="register-button" type="submit" action="register">
+                REGISTER
+            </button>
+        </form>
+    </body>
+</html>
