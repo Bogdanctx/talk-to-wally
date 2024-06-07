@@ -10,4 +10,4 @@ NPM packages:
     <li>path</li>
 </ul>
 
-Pentru a rula proiectul se va folosid comanda <b> node server </b>.
+Pentru a rula proiectul se va folosid comanda <b> node server </b>
